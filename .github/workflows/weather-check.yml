@@ -37,7 +37,7 @@ jobs:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
 
   package:
-    # Runs only if BOTH matrix jobs pass
+    # This ensures packaging ONLY happens if BOTH Node versions pass
     needs: build-and-test
     runs-on: ubuntu-latest
 
